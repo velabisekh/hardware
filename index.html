@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3L-Enterprizes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="3L-Enterprizes">
+            </div>
+    
+            <nav class="nav-links" id="nav-links">
+                <a href="#">Home</a>
+                <a href="#products">Plywood & Hardware</a>
+                <a href="#interior-items">Interior Designs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+    
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars" onclick="toggleMenu()"></i>
+                <i class="fas fa-search" id="search-icon" onclick="toggleSearch()"></i>
+                <i class="fas fa-times" id="close-icon" onclick="closeMenu()"></i>
+            </div>
+    
+            <div class="search-bar" id="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button" onclick="searchProduct()">Search</button>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <!-- Hero Section (Swiper) -->
+    <section class="hero swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('assets/images/hero2.jpg');">
+                <div class="slide-content">
+                    <h2>Beautiful Interior Designs</h2>
+                    <a href="#interior-items" class="btn">Click to Explore</a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url('assets/images/hero1.jpg');">
+                <div class="slide-content">
+                    <h2>Quality Plywood & Hardware</h2>
+                    <a href="#products" class="btn">Click to Explore</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Navigation -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </section>
+      
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Plywood & Hardware</h2>
+        <div class="product-list">
+            <!-- Products will be loaded here via JavaScript -->
+        </div>
+    </section>
+    
+    <!-- <section id="interior-items" class="interior-items">
+        <h2 id="interior-items">Interior Designs</h2>
+        <div class="interior-list"> -->
+            <!-- Interior items will be loaded here via JavaScript -->
+        <!-- </div>
+    </section> -->
+    <!-- <section id="interior-items" class="interior-items">
+        <h2>Interior Designs</h2>
+        <div class="swiper-container interior-swiper">
+            <div class="swiper-wrapper interior-list"> -->
+                <!-- Interior items will be loaded here dynamically -->
+            <!-- </div> -->
+            <!-- Swiper navigation buttons -->
+            <!-- <div class="swiper-button-prev interior-prev"></div>
+            <div class="swiper-button-next interior-next"></div> -->
+            <!-- Swiper pagination -->
+            <!-- <div class="swiper-pagination interior-pagination"></div>
+        </div>
+    </section> -->
+    
+    
+
+   <!-- Contact Form Section -->
+   <section class="contact-section" id="contact">
+    <div class="contact-container">
+        <!-- Contact Form (Left Side) -->
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form id="whatsappForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <label for="enquiry-type">Enquiry Type:</label>
+                <select id="enquiry-type" name="enquiry-type">
+                    <option value="plywood">Plywood</option>
+                    <option value="hardware">Hardware</option>
+                    <option value="interior">Interior Design</option>
+                    <option value="custom-order">Custom Order</option>
+                </select>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>        
+    </div>
+</section>
+   <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3><strong>3L Enterprises</strong></h3>
+            <p>+91 234 567 890</p>
+            <p>1234 Main St, Theni, India</p>
+        </div>
+        <div class="social-links">
+            <p>Follow us:</p>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+    </div>
+    <p>&copy; 2024 3L Enterprises. All rights reserved.</p>
+</footer>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

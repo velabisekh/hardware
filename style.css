@@ -1,0 +1,518 @@
+* {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+html{
+    font-size: 100%;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;;
+    line-height: 1.6;
+    background: #fbba72;
+    color: #691e06;
+}
+
+/* General container styling */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #8f250c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo img {
+    height: 70px;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #fbba72;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Icons styling for mobile */
+.icons .fas {
+    display: none; /* Hidden by default on large screens */
+    color: #fbba72;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Toggle button and search icon are only displayed on smaller screens */
+#menu-bars, #search-icon, #close-icon {
+    display: none;
+}
+
+/* Search bar always visible on large screens */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8f250c;
+    border-radius: 5px;
+    background: #fbba72;
+    color: #691e06;
+    transition: border-color 0.3s;
+}
+.search-bar input:focus {
+    outline: none;
+    border-color: #ca5310;
+}
+
+.search-bar #search-button {
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    background: #ca5310;
+    color: #fbba72;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.search-bar #search-button:hover {
+    background: #bb4d00;
+    transform: scale(1.05);
+}
+
+/* Swiper Container */
+.swiper-container {
+    width: 100%;
+    height: 720px;
+}
+
+/* Swiper Slides */
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+    object-fit: cover;
+}
+
+/* Content within slides */
+.slide-content {
+    text-align: center; 
+    max-width: 600px;
+    margin: 20% auto; 
+    padding: 20px; 
+}
+
+/* Heading styles */
+.swiper-slide h2 {
+    color: white;
+    font-size: 28px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ca5310;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #bb4d00;
+    transform: scale(1.05);
+}
+
+/* Products Section */
+.products {
+    padding: 2rem;
+    background-color: #fbba72;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    background-color: #d8572a;
+    color: #38040e;
+    font-weight: 550;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(23% - 1rem);
+    margin: 0.5rem;
+    text-align: center;
+    padding: 1.2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 300px;
+}
+
+/* Button styling */
+button {
+    background-color: #ca5310;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bb4d00;
+}
+
+/* Style for the interior items swiper */
+.interior-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.interior-swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.interior-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    /* max-width: 600px; */
+    border-radius: 8px;
+}
+
+.interior-swiper .swiper-slide p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.interior-swiper .swiper-button-next,
+.interior-swiper .swiper-button-prev {
+    color: #333;
+}
+
+.interior-swiper .swiper-pagination {
+    bottom: 10px;
+}
+
+.interior-swiper .swiper-slide-active {
+    transform: scale(1.1); /* Increase size slightly when active */
+}
+
+
+/* Contact form styling */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d8572a;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #780116;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+}
+
+.contact-form {
+    flex: 0 0 100%;
+    margin-right: 20px;
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #780116;
+    font-weight: 600;
+    background: #fbba72;
+}
+
+.contact-form button {
+    background-color: #bb4d00;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #8f250c;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: right; 
+    background-color: #8f250c;
+    padding: 25px;
+    color: #780116; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.footer-info {
+    text-align: left; 
+}
+
+.social-links {
+    text-align: right;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #780116;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    cursor: pointer;
+    color: #eee;
+}
+
+/* Tablet Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links on small screens */
+    }
+
+    /* Align menu and search icons in a row */
+    #menu-bars, #search-icon {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .icons #close-icon {
+        display: none; /* Hidden until search or menu is open */
+    }
+
+    /* Toggle menu active state */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #8f250c;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 0 0 5px 5px;
+        z-index: 100;
+    }
+
+    /* Search bar styles */
+    .search-bar {
+        display: none; /* Hide search bar initially */
+    }
+
+    .search-bar.active {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; /* Full-width when active */
+        padding: 0.5rem;
+        background-color: #8f250c;
+        border-radius: 5px;
+        position: absolute;
+        top: 100%; /* Position right below the logo */
+        left: 0;
+        z-index: 100;
+    }
+
+    /* Input styling for search bar */
+    #search-bar input {
+        flex: 1;
+        padding: 0.6rem;
+        border: 1px solid #8f250c;
+        background: #fbba72;
+        color: #691e06;
+        border-radius: 5px 0 0 5px;
+        transition: width 0.3s ease;
+    }
+
+    /* Button styling for search bar */
+    #search-bar button {
+        padding: 0.75rem;
+        background: #ca5310;
+        color: #fff;
+        border: 1px solid #8f250c;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Close icon positioned opposite of logo */
+    #close-icon.active {
+        display: block;
+        font-size: 24px;
+        color: #ca5310;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .swiper-container {
+        height: 600px;
+    }
+
+    .swiper-slide h2 {
+        font-size: 24px;
+    }
+
+    .slide-content {
+        padding: 15px;
+        margin: 30% auto;
+        max-width: 90%;
+    }
+
+    .btn {
+        padding: 6px 12px;
+    }
+
+    .product-item {
+        width: calc(48% - 1rem);
+    }
+
+    .interior-swiper .swiper-slide {
+        max-width: 70%;
+    }
+
+    .interior-swiper .swiper-slide img {
+        max-width: 250px;
+    }
+
+    footer {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Phone Styles (max-width: 480px) */
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 14px; /* Smaller font for mobile */
+    }
+
+    .search-bar.active input {
+        width: calc(100% - 50px); /* More compact width for mobile */
+    }
+
+    .swiper-container {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .swiper-slide h2 {
+        font-size: 20px; /* Smaller font for mobile */
+    }
+
+    .product-item {
+        width: 100%; /* Full width for mobile view */
+    }
+
+    .interior-swiper .swiper-slide {
+        max-width: 90%;
+    }
+
+    .interior-swiper .swiper-slide img {
+        max-width: 200px;
+    }
+
+    .interior-swiper .swiper-slide p {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .footer-content {
+        padding: 10px; /* More compact padding for mobile */
+    }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3L-Enterprizes</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Plywood & Hardware</a></li>
+                    <li><a href="#interior-items">Interior Designs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search products..." />
+                <button id="search-button" onclick="searchProduct()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Swiper) -->
+    <section class="hero swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('assets/images/hero2.jpg');">
+                <h2>Beautiful Interiors</h2>
+                <a href="#products" class="btn">Click to Explore</a>
+            </div>
+            <div class="swiper-slide" style="background-image:url('assets/images/hero1.jpg');">
+                <h2>Quality Plywood & Hardware</h2>
+                <a href="#interior-items" class="btn">Click to Explore</a>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Plywood & Hardware</h2>
+        <div class="product-list">
+            <div class="product-item" onclick="showProductDetails('Hammer')">
+                <img src="assets/images/hammer.jpg" alt="Hammer">
+                <p>Hammer</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Drill')">
+                <img src="assets/images/drill.jpg" alt="Drill">
+                <p>Drill</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Screwdriver')">
+                <img src="assets/images/screwdriver.jpg" alt="Screwdriver">
+                <p>Screwdriver</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Wrench')">
+                <img src="assets/images/wrench.jpg" alt="Wrench">
+                <p>Wrench</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Pliers')">
+                <img src="assets/images/pliers.jpg" alt="Pliers">
+                <p>Pliers</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Chisel')">
+                <img src="assets/images/chisel.jpg" alt="Chisel">
+                <p>Chisel</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Level')">
+                <img src="assets/images/level.jpg" alt="Level">
+                <p>Level</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Saw')">
+                <img src="assets/images/saw.jpg" alt="Saw">
+                <p>Saw</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Tape Measure')">
+                <img src="assets/images/tape-measure.jpg" alt="Tape Measure">
+                <p>Tape Measure</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Utility Knife')">
+                <img src="assets/images/utility-knife.jpg" alt="Utility Knife">
+                <p>Utility Knife</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Claw Hammer')">
+                <img src="assets/images/claw-hammer.jpg" alt="Claw Hammer">
+                <p>Claw Hammer</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Sledge Hammer')">
+                <img src="assets/images/sledge-hammer.jpg" alt="Sledge Hammer">
+                <p>Sledge Hammer</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Angle Grinder')">
+                <img src="assets/images/angle-grinder.jpg" alt="Angle Grinder">
+                <p>Angle Grinder</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Nail Gun')">
+                <img src="assets/images/nail-gun.jpg" alt="Nail Gun">
+                <p>Nail Gun</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Drill Press')">
+                <img src="assets/images/drill-press.jpg" alt="Drill Press">
+                <p>Drill Press</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Router')">
+                <img src="assets/images/router.jpg" alt="Router">
+                <p>Router</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Circular Saw')">
+                <img src="assets/images/circular-saw.jpg" alt="Circular Saw">
+                <p>Circular Saw</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Jigsaw')">
+                <img src="assets/images/jigsaw.jpg" alt="Jigsaw">
+                <p>Jigsaw</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Hammer Drill')">
+                <img src="assets/images/hammer-drill.jpg" alt="Hammer Drill">
+                <p>Hammer Drill</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Reciprocating Saw')">
+                <img src="assets/images/reciprocating-saw.jpg" alt="Reciprocating Saw">
+                <p>Reciprocating Saw</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Table Saw')">
+                <img src="assets/images/table-saw.jpg" alt="Table Saw">
+                <p>Table Saw</p>
+            </div>
+
+            <div class="product-item" onclick="showProductDetails('Birch Plywood')">
+                <img src="assets/images/birch-plywood.jpg" alt="Birch Plywood">
+                <p>Birch Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Maple Plywood')">
+                <img src="assets/images/maple-plywood.jpg" alt="Maple Plywood">
+                <p>Maple Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Oak Plywood')">
+                <img src="assets/images/oak-plywood.jpg" alt="Oak Plywood">
+                <p>Oak Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Cherry Plywood')">
+                <img src="assets/images/cherry-plywood.jpg" alt="Cherry Plywood">
+                <p>Cherry Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Mahogany Plywood')">
+                <img src="assets/images/mahogany-plywood.jpg" alt="Mahogany Plywood">
+                <p>Mahogany Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Pine Plywood')">
+                <img src="assets/images/pine-plywood.jpg" alt="Pine Plywood">
+                <p>Pine Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Fir Plywood')">
+                <img src="assets/images/fir-plywood.jpg" alt="Fir Plywood">
+                <p>Fir Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Beech Plywood')">
+                <img src="assets/images/beech-plywood.jpg" alt="Beech Plywood">
+                <p>Beech Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Laminated Plywood')">
+                <img src="assets/images/laminated-plywood.jpg" alt="Laminated Plywood">
+                <p>Laminated Plywood</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Veneered Plywood')">
+                <img src="assets/images/veneered-plywood.jpg" alt="Veneered Plywood">
+                <p>Veneered Plywood</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="interior-items" class="interior-items">
+
+            <h2 id="interior-items">Interior Designs</h2>
+            <div class="product-item" onclick="showProductDetails('Living Room')">
+                <img src="assets/images/living-room.jpg" alt="Living Room">
+                <p>Living Room</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Bedroom')">
+                <img src="assets/images/bedroom.jpg" alt="Bedroom">
+                <p>Bedroom</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Kitchen')">
+                <img src="assets/images/kitchen.jpg" alt="Kitchen">
+                <p>Kitchen</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Bathroom')">
+                <img src="assets/images/bathroom.jpg" alt="Bathroom">
+                <p>Bathroom</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Dining Room')">
+                <img src="assets/images/dining-room.jpg" alt="Dining Room">
+                <p>Dining Room</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Home Office')">
+                <img src="assets/images/home-office.jpg" alt="Home Office">
+                <p>Home Office</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Entrance')">
+                <img src="assets/images/entrance.jpg" alt="Entrance">
+                <p>Entrance</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Garden')">
+                <img src="assets/images/garden.jpg" alt="Garden">
+                <p>Garden</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Patio')">
+                <img src="assets/images/patio.jpg" alt="Patio">
+                <p>Patio</p>
+            </div>
+            <div class="product-item" onclick="showProductDetails('Balcony')">
+                <img src="assets/images/balcony.jpg" alt="Balcony">
+                <p>Balcony</p>
+            </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <!-- Contact Form (Left Side) -->
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+                <form action="https://api.whatsapp.com/send?phone=YOUR_WHATSAPP_NUMBER&text=" method="post" target="_blank">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+    
+                    <label for="enquiry-type">Enquiry Type:</label>
+                    <select id="enquiry-type" name="enquiry-type">
+                        <option value="plywood">Plywood</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="interior">Interior Design</option>
+                        <option value="custom-order">Custom Order</option>
+                    </select>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <!-- Store Details (Right Side) -->
+            <div class="store-info">
+                <div class="footer-info">
+                    <p><strong>3L Enterprises</strong></p>
+                    <p>+91 234 567 890</p>
+                    <p>1234 Main St, Theni, India</p>
+                </div>
+                <div class="social-links">
+                    <p>Follow us:</p>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 3L Enterprises. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+#search-input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fbba72;
+    background-color: transparent;
+    border-bottom: 2px solid #fbba72;
+    margin-right: 0.5rem;
+  }
+
+  /* Styles for the search button */
+  #search-button {
+    padding: 0.5rem 1rem;
+    background-color: #ca5310;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }

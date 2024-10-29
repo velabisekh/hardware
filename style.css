@@ -10,22 +10,19 @@
     transition: all .2s linear;
 }
 
-
-html{
+html {
     font-size: 100%;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
 
-/* Body styling */
 body {
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background: #fbba72;
     color: #691e06;
 }
 
-/* General container styling */
 .container {
     display: flex;
     align-items: center;
@@ -38,12 +35,10 @@ body {
     z-index: 1000;
 }
 
-/* Logo styling */
 .logo img {
     height: 70px;
 }
 
-/* Navigation menu */
 nav {
     display: flex;
     margin-left: auto;
@@ -67,21 +62,18 @@ nav {
     color: #fff;
 }
 
-/* Icons styling for mobile */
 .icons .fas {
-    display: none; /* Hidden by default on large screens */
+    display: none;
     color: #fbba72;
     font-size: 24px;
     cursor: pointer;
     margin-right: 15px;
 }
 
-/* Toggle button and search icon are only displayed on smaller screens */
 #menu-bars, #search-icon, #close-icon {
     display: none;
 }
 
-/* Search bar always visible on large screens */
 .search-bar {
     display: flex;
     align-items: center;
@@ -117,40 +109,35 @@ nav {
     transform: scale(1.05);
 }
 
-/* Swiper Container */
 .swiper-container {
     width: 100%;
     height: 720px;
 }
 
-/* Swiper Slides */
 .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover; 
-    background-position: center; 
-    position: relative; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
     object-fit: cover;
 }
 
-/* Content within slides */
 .slide-content {
-    text-align: center; 
+    text-align: center;
     max-width: 600px;
-    margin: 20% auto; 
-    padding: 20px; 
+    margin: 20% auto;
+    padding: 20px;
 }
 
-/* Heading styles */
 .swiper-slide h2 {
     color: white;
-    font-size: 28px; 
+    font-size: 28px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin: 0;
 }
 
-/* Button styles */
 .btn {
     display: inline-block;
     padding: 8px 16px;
@@ -167,7 +154,6 @@ nav {
     transform: scale(1.05);
 }
 
-/* Products Section */
 .products {
     padding: 2rem;
     background-color: #fbba72;
@@ -201,7 +187,6 @@ nav {
     height: 300px;
 }
 
-/* Button styling */
 button {
     background-color: #ca5310;
     color: #fff;
@@ -216,7 +201,6 @@ button:hover {
     background-color: #bb4d00;
 }
 
-/* Style for the interior items swiper */
 .interior-swiper {
     width: 100%;
     height: 100%;
@@ -237,7 +221,6 @@ button:hover {
 .interior-swiper .swiper-slide img {
     width: 100%;
     height: 100%;
-    /* max-width: 600px; */
     border-radius: 8px;
 }
 
@@ -257,11 +240,9 @@ button:hover {
 }
 
 .interior-swiper .swiper-slide-active {
-    transform: scale(1.1); /* Increase size slightly when active */
+    transform: scale(1.1);
 }
 
-
-/* Contact form styling */
 .contact-section {
     display: flex;
     justify-content: space-between;
@@ -320,20 +301,20 @@ button:hover {
 
 .footer {
     margin-top: 20px;
-    text-align: right; 
+    text-align: right;
     background-color: #8f250c;
     padding: 25px;
-    color: #780116; 
+    color: #780116;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
 .footer-info {
-    text-align: left; 
+    text-align: left;
 }
 
 .social-links {
@@ -355,26 +336,29 @@ button:hover {
 
 /* Tablet Styles (max-width: 768px) */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide navigation links on small screens */
+
+    .container {
+        padding: 10px;
     }
 
-    /* Align menu and search icons in a row */
+    .nav-links {
+        display: none;
+    }
+
     #menu-bars, #search-icon {
         display: inline-flex;
-        align-items: center;
         gap: 0.5rem;
     }
 
     .icons #close-icon {
-        display: none; /* Hidden until search or menu is open */
+        display: none;
     }
 
-    /* Toggle menu active state */
     .nav-links.active {
         display: flex;
         flex-direction: column;
         background-color: #8f250c;
+        align-items: baseline;
         position: absolute;
         top: 100%;
         right: 0;
@@ -385,48 +369,24 @@ button:hover {
         z-index: 100;
     }
 
-    /* Search bar styles */
     .search-bar {
-        display: none; /* Hide search bar initially */
+        display: none;
     }
 
     .search-bar.active {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%; /* Full-width when active */
+        width: 100%;
         padding: 0.5rem;
         background-color: #8f250c;
         border-radius: 5px;
         position: absolute;
-        top: 100%; /* Position right below the logo */
+        top: 100%;
         left: 0;
         z-index: 100;
     }
 
-    /* Input styling for search bar */
-    #search-bar input {
-        flex: 1;
-        padding: 0.6rem;
-        border: 1px solid #8f250c;
-        background: #fbba72;
-        color: #691e06;
-        border-radius: 5px 0 0 5px;
-        transition: width 0.3s ease;
-    }
-
-    /* Button styling for search bar */
-    #search-bar button {
-        padding: 0.75rem;
-        background: #ca5310;
-        color: #fff;
-        border: 1px solid #8f250c;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    /* Close icon positioned opposite of logo */
     #close-icon.active {
         display: block;
         font-size: 24px;
@@ -439,80 +399,48 @@ button:hover {
     }
 
     .swiper-container {
-        height: 600px;
+        height: 400px;
+        width: 100%;
+        align-items: center;
     }
 
     .swiper-slide h2 {
         font-size: 24px;
     }
 
-    .slide-content {
-        padding: 15px;
-        margin: 30% auto;
-        max-width: 90%;
-    }
-
-    .btn {
-        padding: 6px 12px;
-    }
-
     .product-item {
-        width: calc(48% - 1rem);
+        width: calc(60% - 1rem);
     }
 
-    .interior-swiper .swiper-slide {
-        max-width: 70%;
+    .product-list {
+        justify-content: center; 
+}
+}
+
+/* Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+    .container .logo img {
+        height: 50px;
     }
 
-    .interior-swiper .swiper-slide img {
-        max-width: 250px;
-    }
-
-    footer {
-        margin-top: 20px;
+    .nav-links.active {
+        font-size: 14px;
         text-align: center;
     }
 
-    .footer-content {
-        flex-direction: column;
-    }
-}
-
-/* Mobile Phone Styles (max-width: 480px) */
-@media (max-width: 480px) {
-    .nav-links a {
-        font-size: 14px; /* Smaller font for mobile */
-    }
-
-    .search-bar.active input {
-        width: calc(100% - 50px); /* More compact width for mobile */
-    }
-
-    .swiper-container {
-        height: 300px; /* Smaller height for mobile */
-    }
-
-    .swiper-slide h2 {
-        font-size: 20px; /* Smaller font for mobile */
+    .icons {
+        margin-left: auto;
     }
 
     .product-item {
-        width: 100%; /* Full width for mobile view */
+        width: calc(100% - 1rem);
     }
 
-    .interior-swiper .swiper-slide {
-        max-width: 90%;
+    .product-list {
+        justify-content: center;
     }
 
-    .interior-swiper .swiper-slide img {
-        max-width: 200px;
-    }
-
-    .interior-swiper .swiper-slide p {
-        font-size: 14px; /* Smaller text for mobile */
-    }
-
-    .footer-content {
-        padding: 10px; /* More compact padding for mobile */
+    .swiper-slide h2 {
+        font-size: 18px;
     }
 }
